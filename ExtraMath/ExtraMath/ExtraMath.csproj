@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.json" />
+    <Content Include="package.json" />
+    <Content Include="Procfile" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -69,6 +72,7 @@
     <Content Include="content\bootstrap.css" />
     <Content Include="content\site.css" />
     <Content Include="index.html" />
+    <Content Include="index.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\jquery-1.11.1.min.js" />
     <Content Include="Web.config" />
