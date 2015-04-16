@@ -1,6 +1,0 @@
-c:\users\jseger\documents\visual studio 2013\Projects\ExtraMath\ExtraMath\bin\ExtraMath.dll.config
-c:\users\jseger\documents\visual studio 2013\Projects\ExtraMath\ExtraMath\bin\ExtraMath.dll
-c:\users\jseger\documents\visual studio 2013\Projects\ExtraMath\ExtraMath\bin\ExtraMath.pdb
-c:\users\jseger\documents\visual studio 2013\Projects\ExtraMath\ExtraMath\obj\Debug\ExtraMath.csprojResolveAssemblyReference.cache
-c:\users\jseger\documents\visual studio 2013\Projects\ExtraMath\ExtraMath\obj\Debug\ExtraMath.dll
-c:\users\jseger\documents\visual studio 2013\Projects\ExtraMath\ExtraMath\obj\Debug\ExtraMath.pdb
