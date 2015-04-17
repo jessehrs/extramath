@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title>Extra Math</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+    <div class="container-fluid" ng-controller="buttonCtrl">
+        <div class="h1">Bret's Extra Money ${{dollars.toFixed(2)}}</div>
+        <div class="col-xs-10">
+            <button class="btn btn-lg" ng-class="{true: 'btn-success', false: 'btn-default'}[operation == '+']" ng-click="changeOperation('+')">+</button>
+            <button class="btn btn-lg" ng-class="{true: 'btn-success', false: 'btn-default'}[operation == '-']" ng-click="changeOperation('-')">-</button>
+            <button class="btn btn-lg" ng-class="{true: 'btn-success', false: 'btn-default'}[operation == 'X']" ng-click="changeOperation('X')">X</button>
+            <button class="btn btn-lg" ng-class="{true: 'btn-success', false: 'btn-default'}[operation == '/']" ng-click="changeOperation('/')">/</button>
+        </div>
+        <div class="col-xs-6 col-lg-3" style="background-color:aquamarine;">
+            <div class="row">
+                <div class="col-xs-2 col-xs-offset-4">
+                    <h1>{{x}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 col-xs-offset-2">
+                    <div>
+                        <p class="h1">{{operation}}</p>
+                    </div>
+                </div>
+                <div class="col-xs-1">
+                    <p class="h1">{{y}}</p>
+                </div>
+            </div>
+            <div class="row" ng-hide="!isCorrect">
+                <p class="h2">Correct!</p>
+            </div>
+            <div class="row" ng-hide="!tryAgain">
+                <p class="h2">Try again</p>
+            </div>
+        </div>
+        <div class="col-xs-6 col-lg-3" style="background-color:lavender;">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-xs-8">
+                        <input class="input-lg form-control text-right" ng-model="input" readonly />
+                    </div>
+                    <button class="btn btn-lg btn-default" ng-click="input = ''">CE</button>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '7'">&nbsp;7&nbsp;</button>
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '8'">&nbsp;8&nbsp;</button>
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '9'">&nbsp;9&nbsp;</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '4'">&nbsp;4&nbsp;</button>
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '5'">&nbsp;5&nbsp;</button>
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '6'">&nbsp;6&nbsp;</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '1'">&nbsp;1&nbsp;</button>
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '2'">&nbsp;2&nbsp;</button>
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '3'">&nbsp;3&nbsp;</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-default" ng-click="input = input + '0'">&nbsp;0&nbsp;</button>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block" ng-disabled="input.length == 0" ng-click="submitAnswer()">ENTER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascripts/jquery/jquery-1.11.1.min.js"></script>
+    <script src="javascripts/angular/angular.js"></script>
+    <script src="javascripts/app.js"></script>
+
+</body>
+</html>
